@@ -34,7 +34,7 @@ for (var i = 3; i < nodeArgs.length; i++) {
 }
 
 
-var command = process.argv[2];
+var userCommand = process.argv[2];
 switch(userCommand){
     case "concert-this":
     // run request for bandsintown with specific artist
@@ -48,11 +48,17 @@ switch(userCommand){
                     console.log("Venue: " + data[i].venue.name);
                     if(data[i].venue.region == ""){
                         data[i].venue.region = data[i].venue.country;
-                    }
+                    } else {
                     console.log("Location: " + data[i].venue.city + ", " + data[i].venue.region);
                     console.log("----------------")
                 }
+                // Date of show
+                var date = data[i].datetime; 
+                date = moment(date).format("MM/DD/YYYY");
+                console.log("Date: " + date)
+                console.log("----------------")
             }
+        } 
         });
         break;
     case "spotify-this-song":
