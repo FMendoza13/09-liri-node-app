@@ -32,7 +32,8 @@ for (var i = 3; i < nodeArgs.length; i++) {
         userInput += nodeArgs[i];
     }
 }
-
+// 03413532acb847658fdaa719500480e1
+// secret: 19f860df0df64dbd82ce33c2d560d3ae
 
 var userCommand = process.argv[2];
 switch(userCommand){
