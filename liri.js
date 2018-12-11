@@ -63,6 +63,30 @@ switch(userCommand){
         break;
     case "spotify-this-song":
         console.log("spotify-this-song");
+        spotify.search({ type: "track", query: userInput}, function(err, data){
+            if(err){
+                console.log("Error occured: " + err)
+            }
+            // Designate data to variable
+            var info = data.tracks.items
+            //For loop through elements in array
+            for (var i = 0; i < info.length; i++) {
+                //store albumObject to variable 
+                var albumObject = info[i].album;
+                var trackName = info[i].name
+                var preview = info[i].preview_url
+                //Artist array to variable
+                var artistsInfo = albumObject.artists
+                //Loop through array of artists 
+                for(var j = 0; j < artistsInfo.length; j++){
+                    console.log("Artist: " + artistsInfo[j].name)
+                    console.log("Song Name: " + trackName)
+                    console.log("Preview of Song: " + preview)
+                    console.log("Album Name: " + albumObject.name)
+                    console.log("\n")
+                }
+            }
+        })
         break;
     case "movie-this":
         console.log("movie-this");
