@@ -32,10 +32,11 @@ for (var i = 3; i < nodeArgs.length; i++) {
         userInput += nodeArgs[i];
     }
 }
-// 03413532acb847658fdaa719500480e1
-// secret: 19f860df0df64dbd82ce33c2d560d3ae
+
 
 var userCommand = process.argv[2];
+
+function runLiri() {
 switch(userCommand){
     case "concert-this":
     // run request for bandsintown with specific artist
@@ -56,14 +57,14 @@ switch(userCommand){
                     } else {
                         console.log("Location: " + data[i].venue.city + ", " + data[i].venue.region + ", " + data[i].venue.country);
                     }
-                }
+                
                 // Date of show
                 var date = data[i].datetime; 
                 date = moment(date).format("MM/DD/YYYY");
                 console.log("Date: " + date)
                 console.log("----------------")
+                }
             }
-        
         });
         break;
     case "spotify-this-song":
@@ -111,7 +112,7 @@ switch(userCommand){
              }
         });
         break;
-    
+    }
 }
 
     if (userCommand == "do-what-it-says"){
