@@ -29,11 +29,11 @@ $ npm install <package name>
 - JavaScript
 - NPM Packages
 
-    i. Request
-    ii. Node-Spotify-API
-    iii. Inquirer
-    iv. Moment
-    v. Dotenv
-    
+    - Request
+    - Node-Spotify-API
+    - Inquirer
+    - Moment
+    - Dotenv
+
 # Author
 Fernando Mendoza
