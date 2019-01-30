@@ -1,6 +1,6 @@
 # 09-liri-node-app
 
-Liri is Siri's long lost cousin, with the ability to search Spotify for songs, Bands in Town for concerts, and OMDB for movies.  Liri is a node.js command line application that is a language interpretation and recognition interface.  With Liri, one can use a command line, give it parameters in which Liri will give back data.  
+Liri is Siri's long, lost cousin, with the ability to search Spotify for songs, Bands in Town for concerts, and OMDB for movies.  Liri is a node.js command line application that is a language interpretation and recognition interface.  With Liri, one can use a command line, give it parameters in which Liri will give back data.  
 
 Possible commands are 'concert-this', 'spotify-this-song', 'movie-this' and 'do-what-it-says.'
 
@@ -27,7 +27,7 @@ $ npm install <package name>
 ## Technology Used
 
 - JavaScript
-- NPM Packages
+- NPM Packages:
 
     - Request
     - Node-Spotify-API
